@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-graph-integration
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            client-id: de6b0f38-7961-4389-a913-eb91d254fcd6
+            client-secret: YOUR_CLIENT_SECRET
+            scope: openid, profile, email, offline_access, User.Read
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          azure:
+#            authorization-uri: https://login.microsoftonline.com/4986dbe9-7e4b-47c9-8440-77d8e99d78fb/oauth2/v2.0/authorize
+#            token-uri: https://login.microsoftonline.com/4986dbe9-7e4b-47c9-8440-77d8e99d78fb/oauth2/v2.0/token
+#            user-info-uri: https://graph.microsoft.com/v1.0/me
+#            jwk-set-uri: https://login.microsoftonline.com/4986dbe9-7e4b-47c9-8440-77d8e99d78fb/discovery/v2.0/keys
+            issuer-uri: https://login.microsoftonline.com/4986dbe9-7e4b-47c9-8440-77d8e99d78fb/v2.0
+
+
+
